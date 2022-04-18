@@ -1,0 +1,10 @@
+
+<div class="score-board">
+    <div class="badge" id="user-label">comp1 : {{compSelected1}}</div>
+    <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+    <span id="user-score">{{userScore}}</span>:<span id="comp-score">{{compScore}}</span>
+  </div>
+  <div class="result">
+    <p *ngIf="status">{{compSelected1}} {{action}} {{compSelected}}{{status}} </p>
+  </div>
+  <button class="btn btn-warning" style="margin-left: 47%;" (click)='userPick()'>Click to start</button>

@@ -1,0 +1,30 @@
+<div class="container lg-col-12" >
+<div class="score-board" >
+    <div class="badge" id="user-label">user : {{userSelected}}</div>
+    <div class="badge" id="comp-label">comp : {{compSelected}}</div>
+    <span id="user-score">{{userScore}}</span>:<span id="comp-score">{{compScore}}</span>
+  </div>
+  
+  <div class="result">
+    <p *ngIf="status">{{userSelected}} {{action}} {{compSelected}}{{status}} </p>
+  </div>
+  
+  <div class="choices">
+    <div class="choice" id="rock">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0sVW3peElzZPpd9ywJBWtweXb4eY1UNlW5g&usqp=CAU" (click)='userPick("rock")'>
+      <h3>Rock</h3>
+    </div>
+    <div class="choice" id="paper">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1kfV75Dw1Og-6aYCQso-bcxTaa3OFK_JES1y04RAEfXqHw0tFiUqq-4q1V-nVXYH-T74&usqp=CAU" (click)='userPick("paper")'>
+      <h3>Paper</h3>
+    </div>
+    <div class="choice" id="scissors">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNwNvenQRGebZJvR7mPlvvccjv1y-dvmqnvjpzc7qTghZEJhT5pOcRg2TRQrPo8SNCQ0&usqp=CAU" (click)='userPick("scissors")'>
+     <h3>scissor</h3>
+    </div>
+  </div>
+  
+  <p id="action-message" *ngIf="!status">You Can Make Your Move</p>
+  <p id="action-message" *ngIf="status">Wait...</p>
+</div>
